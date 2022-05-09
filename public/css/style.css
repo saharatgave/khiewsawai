@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;700&display=swap');
+
+:root {
+    --postBorder: hsl(216, 8%, 88%);
+    --primaryBackground: #4167b2;
+
+    --primaryText: #1d2129;
+    --secondaryText: #ccc;
+}
+/* html {
+    scroll-behavior: smooth;
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+}
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 2.4rem;
+}
+p, h1, h2, h3, h4, h5, h6, a {
+    color: var(--primaryText);
+}
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-content {
+    margin: 1rem 0;
+}
+.main-content-start {
+    margin: 3.6rem 0 1rem 0;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.grid-center {
+    justify-items: center;
+}
+
+/* ------------ Header ------------ */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    transition: all 0.6s ease;
+    top: 0;
+}
+.navbar.nav-sticky {
+    background: #f7f7f7;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 2rem;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.menu-list {
+    display: inline-flex;
+}
+.menu-list li {
+    list-style: none;
+}
+.logo a {
+    font-size: 1.6rem;
+    color: #000;
+}
+.menu-list li a {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--primaryText);
+    margin-left: 1.6rem;
+    transition: all 0.4s ease;
+}
+.menu-list li a:hover {
+    text-shadow: 1px 1px 3px rgba(100, 100, 100, 0.6);
+    color: #2d2d2d;
+}
+.menu-icon {
+    cursor: pointer;
+    font-size: 1rem;
+    display: none;
+}
+.menu-icon.cancel-menu-btn {
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+}
+
+@media only screen and (max-width: 868px) {
+    .menu-list {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        background: #f7f7f7;
+        display: block;
+        padding: 2rem 0;
+        text-align: center;
+        box-shadow: -2px 1px 3px rgba(0, 0, 0, 0.12);
+        transition: all 0.6s ease-out;
+    }
+    .menu-list.active-nemu {
+        right: 0;    
+    }
+    .menu-list li {
+        margin-top: 1.6rem;
+    }
+    .menu-list li a {
+        margin: 0;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .menu-icon.hide-menu {
+        display: none;
+    }
+
+    .main-content {
+        margin: 1rem 1rem;
+    }
+    .main-content-start {
+        margin: 3.6rem 1rem 1rem 1rem;
+    }
+}
+
+/* ------------ Gave Page ------------ */
+.gave-item {
+    border: 1px solid var(--postBorder);
+    border-radius: 4px;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 2rem;
+}
+.gave-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+.gave-item p {
+    color: var(--secondaryText);
+}
+.gave-item:hover {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.12);
+}
+.banner-gave {
+    height: 80vh;
+    background: url('../images/banner_gave2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+}
+.content-profile {
+    height: 80vh;
+    align-items: center;
+}
+.profilePic {
+    display: block;
+    border-radius: 50%;
+    width: 360px;
+    margin: 30px;
+    box-shadow: 1px 2px 10px;
+    justify-self: right;
+}
+@media only screen and (max-width: 868px) {
+    .content-profile img.profilePic {
+        display: none;
+    }
+    .content-profile h2 {
+        margin-left: 4rem;
+    }
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .gave-item {
+        border: 1px solid var(--postBorder);
+        border-radius: 4px;
+        max-width: 600px;
+        background-color: #fff;
+        padding: 2rem;
+    }
+}
+
+
+
+footer {
+    background-color: #2d2d2d;
+    text-align: center;
+    padding: 0.5rem;
+    
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+footer > p {
+    color: #fff;
+}
+#back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    color: var(--primaryText);
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid var(--primaryText);
+    border-radius: 50%;
+    transition: 0.4s ease-in-out;
+}
+#back-to-top-btn:hover {
+    color: #fff;
+    background-color: var(--primaryText);
+}
+@media screen and (max-width: 768px) {
+    #back-to-top-btn { font-size: 18px; width: 32px; height: 32px; }
+}
+.btnEntrance {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: btnEntrance;
+}
+/* zoom in */
+/* @keyframes btnEntrance {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    to {
+        opacity: 1;
+    }
+} */
+/* fade in */
+@keyframes btnEntrance {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.btnExit {
+    animation: btnExit 1s both;
+    /* animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: btnExit; */
+}
+/* zoom out */
+@keyframes btnExit {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+}
+/* fade out */
+/* @keyframes btnExit {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+} */
+
+
+
