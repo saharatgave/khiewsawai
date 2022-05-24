@@ -15,6 +15,11 @@ class GaveController extends Controller
     }
 
     function portfolio() {
-        return view('gave.gave');
+        return view('gave.portfolio.portfolio_home');
+    }
+
+    function portfolioPage($page) {
+        // dd('gave.portfolio.portfolio_' . $page);
+        return view('gave.portfolio.portfolio_' . $page);
     }
 }

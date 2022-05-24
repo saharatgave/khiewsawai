@@ -25,9 +25,9 @@
             if (backToTopBtn.classList.contains("btnEntrance")) {
                 backToTopBtn.classList.add("btnExit");
                 backToTopBtn.classList.remove("btnEntrance");
-                setTimeOut(() => {
-                    backToTopBtn.style.display = "none";
-                }, 250);
+                // setTimeout(() => {
+                //     backToTopBtn.style.display = "none";
+                // }, 2500);
             }
         }
     }

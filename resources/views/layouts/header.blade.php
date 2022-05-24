@@ -27,11 +27,11 @@
     const navbar = document.querySelector(".navbar");
 
     menuBtn.onclick = () => {
-        menuList.classList.add("active-nemu");
+        menuList.classList.add("active-menu");
         menuBtn.classList.add("hide-menu");
     }
     cancelBtn.onclick = () => {
-        menuList.classList.remove("active-nemu");
+        menuList.classList.remove("active-menu");
         menuBtn.classList.remove("hide-menu");
     }
 

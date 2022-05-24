@@ -3,7 +3,7 @@
     <section class="banner-gave">
         <div class="container">
             <div class="content-profile grid-2 grid-center">
-                <img src="{{ asset('images/profile.jpg') }}" alt='Profile' class='profilePic' />
+                <img src="{{ asset('images/gave_page/portfolio_page/profile.jpg') }}" alt='Profile' class='profilePic' />
                 <h2><span class="typeText"></span></h2>
             </div>
         </div>
@@ -15,14 +15,14 @@
             <div class="content-link grid-2 grid-center">
                 <a href="{{route('portfolio')}}">
                 <div class="gave-item">
-                    <img src="https://via.placeholder.com/500" alt="img-item">
+                    <img src="{{ asset('images/gave_page/portfolio_page.png') }}" alt="img-item">
                     <h3>Portfolio</h3>
                     <p>Portfolio about me.</p>
                 </div>
                 </a>
                 <a href="{{route('grid-responsive')}}">
                 <div class="gave-item">
-                    <img src="https://via.placeholder.com/500" alt="img-item">
+                    <img src="{{ asset('images/gave_page/grid_page.png') }}" alt="img-item">
                     <h3>Grid Responsive</h3>
                     <p>Grid Responsive Testing in normal web.</p>
                 </div>

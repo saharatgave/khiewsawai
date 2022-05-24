@@ -25,7 +25,11 @@ Route::get('/', [WelcomeController::class, 'index'])->name('home');
 Route::prefix('/gave')->group(function () {
     Route::get('/', [GaveController::class, 'index'])->name('gave');
     Route::get('/grid-responsive', [GaveController::class, 'gridResponsive'])->name('grid-responsive');
-    Route::get('/portfolio', [GaveController::class, 'portfolio'])->name('portfolio');
+
+    Route::prefix('/portfolio')->group(function () {
+        Route::get('/', [GaveController::class, 'portfolio'])->name('portfolio');
+        Route::get('/{page}', [GaveController::class, 'portfolioPage'])->name('portfolio-page');
+    });
 
     Route::get('/test', [WelcomeController::class, 'test'])->name('test');
 });
