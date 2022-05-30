@@ -20,6 +20,7 @@ use App\Http\Controllers\GaveController;
 // });
 
 Route::get('/', [WelcomeController::class, 'index'])->name('home');
+Route::get('/login', [WelcomeController::class, 'login'])->name('login');
 
 
 Route::prefix('/gave')->group(function () {

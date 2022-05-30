@@ -5,10 +5,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body {
-    overflow: hidden;
-}
 section {
+    overflow: hidden;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,6 +169,10 @@ section .color:nth-child(4) {
     margin-bottom: 20px;
     font-weight: 600;
 }
+.form .inputBox input[type="submit"]:hover {
+    color: #000;
+    box-shadow: 1px 1px 2px #fff;
+}
 .forget {
     margin-top: 5px;
     color: #fff;
@@ -177,4 +180,33 @@ section .color:nth-child(4) {
 .forget a {
     color: #fff;
     font-weight: 600;
+}
+
+
+@media only screen and (max-width: 648px) {
+    body {
+        overflow-y: hidden;
+    }
+    .container {
+        width: 320px;
+    }
+    .form {
+        padding: 20px;
+    }
+    .box .square:nth-child(1) {
+        top: -50px;
+        right: 0px;
+        width: 100px;
+        height: 100px;
+    }
+    .box .square:nth-child(2) {
+        display: none;
+    }
+    .box .square:nth-child(3) {
+        bottom: 50px;
+        right: 16px;
+        width: 80px;
+        height: 80px;
+        z-index: 0;
+    }
 }

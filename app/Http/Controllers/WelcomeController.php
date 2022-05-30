@@ -13,4 +13,8 @@ class WelcomeController extends Controller
     function test() {
         return view('test');
     }
+
+    function login() {
+        return view('login_dec');
+    }
 }

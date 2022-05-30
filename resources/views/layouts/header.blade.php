@@ -11,7 +11,7 @@
             <li><a href="#">Memories</a></li>
             <li><a href="#">Chat</a></li>
             <li><a href="{{route('gave')}}">Gave</a></li>
-            <li><a href="#">Login</a></li> 
+            <li><a href="{{route('login')}}">Login</a></li> 
         </ul>
         <div class="menu-icon menu-btn">
             <i class="fas fa-bars"></i>
